@@ -18,7 +18,11 @@ for directory in directories:
 files=['dvc.yaml',
        'params.yaml',
        '.gitignore',
-       os.path.join('src','__init__.py')]
+       os.path.join('src','__init__.py'),
+       os.path.join('src','get_data.py'),
+       os.path.join('src','load_data.py'),
+       os.path.join('src','split_data.py'),
+       os.path.join('src','train_and_evaluate.py')]
 
 for file in files:
     with open(file,'w') as f:

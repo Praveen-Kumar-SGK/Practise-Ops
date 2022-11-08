@@ -1,4 +1,4 @@
-#### 1.Steps to Initialize Git Repository
+#### 1. Steps to Initialize Git Repository
 ```
 git init
 ```
@@ -9,18 +9,18 @@ git clone https://github.com/Praveen-Kumar-SGK/simple-dvc-demo.git
 ```
 git remote add origin  https://github.com/Praveen-Kumar-SGK/simple-dvc-demo.git
 ```
-#### 2.DVC
+#### 2. DVC
 ```
 dvc init
 ```
-#### 3.Create requirements.txt
+#### 3. Create requirements.txt
  ```
 pip install -r requirements.txt
 ```
-#### 4.Create template.py 
+#### 4. Create template.py 
 - It creates empty folders - data(raw,processed), notebooks, src, templates, saved_models etc
-- It creates empty files - (src,__init__.py), dvc.yaml, params.yaml , .gitignore
-#### 5.Uploading the created files
+- It creates empty files - src(__init__.py,get_data,load,split,evaluate), dvc.yaml, params.yaml , .gitignore
+#### 5. Uploading the created files
 ```
 git add .
 ```
@@ -34,7 +34,7 @@ git push origin main
 ```
 git add . && git commit -m "First Commit" && git push origin main
 ```
-#### 6.Download dataset and placing in data_given folder
+#### 6. Download dataset and placing in data_given folder
 https://drive.google.com/drive/folders/18zqQiCJVgF7uzXgfbIJ-04zgz1ItNfF5?usp=sharing
 
 #### 7.Adding files to DVC
