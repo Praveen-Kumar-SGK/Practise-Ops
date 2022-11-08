@@ -37,8 +37,13 @@ git add . && git commit -m "First Commit" && git push origin main
 #### 6. Download dataset and placing in data_given folder
 https://drive.google.com/drive/folders/18zqQiCJVgF7uzXgfbIJ-04zgz1ItNfF5?usp=sharing
 
-#### 7.Adding files to DVC
+#### 7. Adding files to DVC
 - Github does not hold bigger files but dvc will save it in our google drive and track the version.
 ```
 dvc add data_given/winequality.csv
 ```
+#### 8. Source files 
+- get_data : 
+- load_data :
+- split_data :
+- train_and_evaluate :
