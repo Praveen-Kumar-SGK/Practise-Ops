@@ -9,8 +9,10 @@ git init
 ```
 dvc init
 ```
-1. Create requirements.txt
-2. ```pip install -r requirements.txt```
+##### Create requirements.txt
+ ```
+pip install -r requirements.txt
+```
 ```
 git add .
 ```
