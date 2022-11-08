@@ -3,6 +3,7 @@ import os
 # os.path.join - creates sub folders
 directories = [os.path.join('data','raw'),
                os.path.join('data','processed'),
+               'data_given',
                'src',
                'templates',
                'notebooks',
