@@ -1,0 +1,7 @@
+dvc
+tox
+flask
+pandas
+sklearn
+dvc[gdrive]
+
