@@ -43,7 +43,8 @@ https://drive.google.com/drive/folders/18zqQiCJVgF7uzXgfbIJ-04zgz1ItNfF5?usp=sha
 dvc add data_given/winequality.csv
 ```
 #### 8. Source files 
-- get_data : 
-- load_data :
-- split_data :
-- train_and_evaluate :
+- get_data : If the data is from cloud or any other local folder we access and place it in data/raw
+- load_data : The raw data might need some cleaning like changing the column names
+- split_data : We will train test split and storing in data/processed folder
+- train_and_evaluate : We train the model and evaluate the train dataset and dump the model and the scores & params in respective folder( saved_model and reports).
+#### 9. DVC yaml
