@@ -7,7 +7,8 @@ directories = [os.path.join('data','raw'),
                'src',
                'templates',
                'notebooks',
-               'saved_models']
+               'saved_models',
+               'reports']
 
 for directory in directories:
     os.makedirs(directory,exist_ok=True)
