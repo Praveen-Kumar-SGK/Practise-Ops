@@ -1,0 +1,60 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - path: data_given/winequality.csv
+      md5: ccc8d3507eb151f53f760d36abdef888
+      size: 91998
+    - path: src/get_data.py
+      md5: c585989ab36f974827ff70f1c661b26f
+      size: 658
+    - path: src/load_data.py
+      md5: 8c7e41f094b633d9b796230e26fa9343
+      size: 564
+    outs:
+    - path: data/raw/winequality.csv
+      md5: d6e3e93f98e8888a635d43ee130a1b9f
+      size: 98884
+  split_data:
+    cmd: python src/split_data.py --config=params.yaml
+    deps:
+    - path: data/raw/winequality.csv
+      md5: d6e3e93f98e8888a635d43ee130a1b9f
+      size: 98884
+    - path: src/split_data.py
+      md5: b875171574ad7211f2876b07299a16ab
+      size: 853
+    outs:
+    - path: data/processed/test_winequality.csv
+      md5: 8ae762efc9b287578b3bdd49977fb9d4
+      size: 19902
+    - path: data/processed/train_winequality.csv
+      md5: 99d971957f0969ea7b2f397c166c9e0d
+      size: 79148
+  train_evaluate:
+    cmd: python src/train_and_evaluate.py --config=params.yaml
+    deps:
+    - path: data/processed/test_winequality.csv
+      md5: 8ae762efc9b287578b3bdd49977fb9d4
+      size: 19902
+    - path: data/processed/train_winequality.csv
+      md5: 99d971957f0969ea7b2f397c166c9e0d
+      size: 79148
+    - path: src/train_and_evaluate.py
+      md5: 0bcf6a516b58673ab08495a0ad02cba8
+      size: 2140
+    params:
+      params.yaml:
+        estimators.ElasticNet.params.alpha: 0.9
+        estimators.ElasticNet.params.l1_ratio: 0.4
+    outs:
+    - path: reports/params.json
+      md5: 6a2a9adcbc07031f9a09f63501cc9fba
+      size: 37
+    - path: reports/scores.json
+      md5: 17b37da334df69a669a3daa8d0bd7c4c
+      size: 90
+    - path: saved_models/ElasticNet.joblib
+      md5: 26be83b62b999d24b2a7398ecefec649
+      size: 1393
