@@ -8,7 +8,8 @@ directories = [os.path.join('data','raw'),
                'templates',
                'notebooks',
                'saved_models',
-               'reports']
+               'reports',
+               'tests']
 
 for directory in directories:
     os.makedirs(directory,exist_ok=True)
@@ -23,7 +24,10 @@ files=['dvc.yaml',
        os.path.join('src','get_data.py'),
        os.path.join('src','load_data.py'),
        os.path.join('src','split_data.py'),
-       os.path.join('src','train_and_evaluate.py')]
+       os.path.join('src','train_and_evaluate.py'),
+       os.path.join('tests','__init__.py'),
+       os.path.join('tests','conftest.py'),
+       os.path.join('tests','test_config.py')]
 
 for file in files:
     with open(file,'w') as f:

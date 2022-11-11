@@ -1,6 +1,7 @@
 dvc
 tox
 flask
+pytest
 pandas
 sklearn
 dvc[gdrive]

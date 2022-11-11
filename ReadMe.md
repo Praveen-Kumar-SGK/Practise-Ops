@@ -18,8 +18,8 @@ dvc init
 pip install -r requirements.txt
 ```
 #### 4. Create template.py 
-- It creates empty folders - data(raw,processed), notebooks, src, templates, saved_models etc
-- It creates empty files - src(__init__.py,get_data,load,split,evaluate), dvc.yaml, params.yaml , .gitignore
+- It creates empty folders - data(raw,processed), notebooks, src, templates, saved_models,tests,reports etc
+- It creates empty files - src(__init__.py,get_data,load,split,evaluate), dvc.yaml, params.yaml , .gitignore, tests(init,conftest,test_config)
 #### 5. Uploading the created files
 ```
 git add .
