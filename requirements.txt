@@ -6,4 +6,4 @@ flake8
 pandas
 sklearn
 dvc[gdrive]
-
+-e .

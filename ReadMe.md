@@ -48,3 +48,7 @@ dvc add data_given/winequality.csv
 - split_data : We will train test split and storing in data/processed folder
 - train_and_evaluate : We train the model and evaluate the train dataset and dump the model and the scores & params in respective folder( saved_model and reports).
 #### 9. DVC yaml
+- This file creates a pipeline/stages for tracking the version of the required doc.
+#### 10. tox.ini
+#### 11. setup.py 
+- We can install the src file by converting into a package.
