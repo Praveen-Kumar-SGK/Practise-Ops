@@ -23,7 +23,7 @@ def read_params(config_path=params_path):
 
 def predict(data):
     config=read_params(params_path)
-    model_dir=config['webapp_model_dir']
+    model_dir=config['model_dir']
     model=joblib.load(model_dir)
     prediction=model.predict(data).tolist()[0]
     try:
@@ -34,15 +34,20 @@ def predict(data):
     except NotInRange:
         return "Unexpected result"
 
+def get_schema(schema_path=schema_path):
+    with open(schema_path) as json_file:
+        schema = json.load(json_file)
+    return schema
+
 def validate_input(dict_request):
     def validate_cols(col):
-        schema = json.load(schema_path)
+        schema = get_schema()
         actual_col= schema.keys()
         if col not in actual_col:
             raise NotInCols
 
     def validate_values(col,val):
-        schema=json.load(schema_path)
+        schema=get_schema()
         if not(schema[col]['min']<=float(dict_request[col])<=schema[col]['max']) :
             raise NotInRange
 
