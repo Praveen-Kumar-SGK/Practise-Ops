@@ -1,18 +1,18 @@
-<!--{% extends 'base.html' %}-->
+{% extends 'base.html' %}
 
-<!--{% block title %}-->
-<!--WineQuality-->
-<!--{% endblock title %}-->
-
-
-<!--{% block custom_css %}-->
-<!--&lt;!&ndash; Custom CSS &ndash;&gt;-->
-<!--<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">-->
-<!--{% endblock custom_css %}-->
+{% block title %}
+WineQuality
+{% endblock title %}
 
 
-<!--{% block body %}-->
-<!--&lt;!&ndash; nav bar &ndash;&gt;-->
+{% block custom_css %}
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock custom_css %}
+
+
+{% block body %}
+<!-- nav bar -->
 
 <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top" style="background-color: #e3f2fd;">
     <a class="navbar-brand" href="/">WineQualityPrediction</a>
@@ -99,7 +99,8 @@
                 </div>
             </div>
         </div>
-
+    </div>
+</div>
         {% endblock body %}
 
         {% block custom_js %}
