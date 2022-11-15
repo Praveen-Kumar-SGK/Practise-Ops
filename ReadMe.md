@@ -60,3 +60,4 @@ dvc add data_given/winequality.csv
 #### 14. prediction_service
 - schema.json : This json file holds the "min" and "max" of respective Independent parameter(X variables).
 - prediction.py : This file validates the inputs range of values given for predictions and gives the prediction to html file.
+#### 15. cicd.yaml
