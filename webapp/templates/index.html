@@ -78,7 +78,7 @@
                         <!-- Select output language here. -->
                         <div class="form-group">
                         </div>
-                        <button type="submit" class="btn btn-primary mb-2">Predict</button></br>
+                        <button type="submit" class="btn btn-primary mb-2">Predict</button><br>
                         </br>
                     </form>
                     <!-- Translated text returned by the Translate API is rendered here. -->
@@ -100,9 +100,9 @@
             </div>
         </div>
 
-<!--        {% endblock body %}-->
+        {% endblock body %}
 
-<!--        {% block custom_js %}-->
+        {% block custom_js %}
         <!-- Custom JS -->
-        <script src="{{ url_for('static', filename='script/index.js') }}"></script>
-<!--        {% endblock custom_js %}-->
+        <script src="{{ url_for('static', filename='sctipt/index.js') }}"></script>
+        {% endblock custom_js %}
