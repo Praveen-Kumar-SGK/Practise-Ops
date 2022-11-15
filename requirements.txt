@@ -1,5 +1,6 @@
 dvc
 tox
+joblib
 flask
 pytest
 flake8

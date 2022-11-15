@@ -11,7 +11,7 @@ app=Flask(__name__,static_folder=static_dir,template_folder=template_dir)
 
 @app.route('/',methods=['GET','POST'])
 def index():
-    if request.methods=='POST':
+    if request.method=='POST':
         try:
             if request.form:
                 dict_req=dict(request.form)
@@ -24,7 +24,7 @@ def index():
             error = {"Error": e}
             return render_template('404.html',error=error)
     else:
-        render_template("index.html")
+        return render_template("index.html")
 
 if __name__=='__main__':
     app.run(host='0.0.0.0',port=5000,debug=True)
