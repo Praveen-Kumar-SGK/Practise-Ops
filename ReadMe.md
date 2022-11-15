@@ -42,7 +42,7 @@ https://drive.google.com/drive/folders/18zqQiCJVgF7uzXgfbIJ-04zgz1ItNfF5?usp=sha
 ```
 dvc add data_given/winequality.csv
 ```
-#### 8. Source files 
+#### 8. Source files- src 
 - get_data : If the data is from cloud or any other local folder we access and place it in data/raw
 - load_data : The raw data might need some cleaning like changing the column names
 - split_data : We will train test split and storing in data/processed folder
@@ -52,3 +52,11 @@ dvc add data_given/winequality.csv
 #### 10. tox.ini
 #### 11. setup.py 
 - We can install the src file by converting into a package.
+#### 12. webapp
+- static : css folder containg main.css and script folder containg the index.js
+- templats : It contains the index, 404 and base html files.
+#### 13. app.py
+- This file is a flask deployment file where it contains values from the html or api response and produces predicted value in the html page.
+#### 14. prediction_service
+- schema.json : This json file holds the "min" and "max" of respective Independent parameter(X variables).
+- prediction.py : This file validates the inputs range of values given for predictions and gives the prediction to html file.
