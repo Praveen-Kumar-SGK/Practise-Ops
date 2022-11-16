@@ -32,4 +32,4 @@ stages:
     - reports/params.json:
         cache: false
     outs:
-      - saved_models/ElasticNet.joblib
+      - saved_models/model.joblib
