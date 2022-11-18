@@ -8,3 +8,8 @@ pandas
 scikit-learn==1.0.2
 dvc[gdrive]
 -e .
+gunicorn
+joblib
+numpy
+Jinja2
+MarkupSafe
