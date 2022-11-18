@@ -5,6 +5,6 @@ flask
 pytest
 flake8
 pandas
-scikit-learn
+scikit-learn==1.0.2
 dvc[gdrive]
 -e .
