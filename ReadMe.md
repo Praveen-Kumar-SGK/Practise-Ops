@@ -1,6 +1,8 @@
 <p align="center">
    <img src="https://raw.githubusercontent.com/camelot-dev/camelot/master/docs/_static/camelot.png" width="200">
 </p>
+
+
 #### 1. Steps to Initialize Git Repository
 ```
 git init
